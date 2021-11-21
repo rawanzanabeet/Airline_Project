@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="s.FXMLDocumentController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutY="10.0" prefHeight="710.0" prefWidth="911.0">
+         <children>
+            <AnchorPane id="AnchorPane" layoutX="-1.0" layoutY="10.0" prefHeight="691.0" prefWidth="911.0" style="-fx-background-color: #b4d7Fe#3d6cb5;">
+               <children>
+                  <Label layoutX="251.0" layoutY="77.0" text="Welcome To Airline App" textFill="#21406b">
+                     <font>
+                        <Font name="Gabriola" size="70.0" />
+                     </font>
+                     <effect>
+                        <Reflection>
+                           <input>
+                              <DropShadow />
+                           </input>
+                        </Reflection>
+                     </effect>
+                  </Label>
+                  <ImageView fitHeight="189.0" fitWidth="195.0" layoutX="127.0" layoutY="322.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Software-20211115T174810Z-001/Software/src/image/customer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="223.0" fitWidth="206.0" layoutX="24.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Software-20211115T174810Z-001/Software/src/image/air.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="189.0" fitWidth="195.0" layoutX="588.0" layoutY="337.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Software-20211115T174810Z-001/Software/src/image/Traveler.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="597.0" layoutY="525.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="172.0" styleClass="shiny" stylesheets="@../../../Software-20211115T174810Z-001/Software/src/Css.css" text="Traveler">
+                     <effect>
+                        <Reflection bottomOpacity="0.09" topOpacity="0.52" />
+                     </effect>
+                  </Button>
+                  <Button layoutX="136.0" layoutY="525.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseClicked="#handleButtonAction" prefHeight="62.0" prefWidth="172.0" styleClass="shiny" stylesheets="@../../../Software-20211115T174810Z-001/Software/src/Css.css" text="Admin">
+                     <effect>
+                        <Reflection bottomOpacity="0.09" topOpacity="0.52" />
+                     </effect>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="AnchorPane" layoutY="-11.0" prefHeight="700.0" prefWidth="911.0" style="-fx-background-color: #b4d7Fe#3d6cb5;">
+               <children>
+                  <Label layoutX="251.0" layoutY="77.0" text="Welcome To Airline App" textFill="#21406b">
+                     <font>
+                        <Font name="Gabriola" size="70.0" />
+                     </font>
+                     <effect>
+                        <Reflection>
+                           <input>
+                              <DropShadow />
+                           </input>
+                        </Reflection>
+                     </effect>
+                  </Label>
+                  <ImageView fitHeight="189.0" fitWidth="195.0" layoutX="127.0" layoutY="322.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/customer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="223.0" fitWidth="206.0" layoutX="24.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/air.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="189.0" fitWidth="195.0" layoutX="588.0" layoutY="337.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Traveler.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="597.0" layoutY="525.0" mnemonicParsing="false" onAction="#handleButtonAction2" prefHeight="62.0" prefWidth="172.0" styleClass="shiny" stylesheets="@css.css" text="Traveler">
+                     <effect>
+                        <Reflection bottomOpacity="0.09" topOpacity="0.52" />
+                     </effect>
+                  </Button>
+                  <Button layoutX="136.0" layoutY="525.0" mnemonicParsing="false" onAction="#signb" prefHeight="62.0" prefWidth="172.0" styleClass="shiny" stylesheets="@css.css" text="Admin">
+                     <effect>
+                        <Reflection bottomOpacity="0.09" topOpacity="0.52" />
+                     </effect>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
