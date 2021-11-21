@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #b4d7Fe#3d6cb5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="s.EmptyController">
+   <children>
+      <AnchorPane prefHeight="170.0" prefWidth="900.0">
+         <children>
+            <AnchorPane fx:id="showflightpan" layoutY="-1.0" onMouseClicked="#mouseclickedd" onMouseEntered="#panneaction" onMouseExited="#panneexited" onMousePressed="#mousepressed" prefHeight="173.0" prefWidth="218.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="735.0" AnchorPane.topAnchor="-1.0">
+               <children>
+                  <ImageView fx:id="showflight" fitHeight="130.0" fitWidth="118.0" layoutX="35.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/flight%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="text1" layoutX="28.0" layoutY="121.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="144.0" style="-fx-background-color: transparent;" text="SHOW FLIGHT" textFill="#3d6cb2">
+                     <font>
+                        <Font name="Gabriola" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="userprofile" layoutX="244.0" layoutY="1.0" onMouseClicked="#mouseclickedd" onMouseEntered="#panneaction" onMouseExited="#panneexited" onMousePressed="#mousepressed" prefHeight="80.0" prefWidth="218.0" AnchorPane.leftAnchor="244.0" AnchorPane.topAnchor="1.0">
+               <children>
+                  <ImageView fx:id="userp1" fitHeight="112.0" fitWidth="130.0" layoutX="46.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/man.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="text2" layoutX="41.0" layoutY="133.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="136.0" style="-fx-background-color: transparent;" text="USER PROFIE" textFill="#3d6cb2">
+                     <font>
+                        <Font name="Gabriola" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="changepass" layoutX="490.0" layoutY="-2.0" onMouseClicked="#mouseclickedd" onMouseEntered="#panneaction" onMouseExited="#panneexited" onMousePressed="#mousepressed" prefHeight="154.0" prefWidth="218.0">
+               <children>
+                  <ImageView fx:id="userp11" fitHeight="130.0" fitWidth="150.0" layoutX="35.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/password.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="text3" layoutX="16.0" layoutY="134.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="175.0" style="-fx-background-color: transparent;" text="CHANGH PASSOWRD" textFill="#3d6cb2">
+                     <font>
+                        <Font name="Gabriola" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="logout" layoutX="734.0" layoutY="1.0" onMouseClicked="#mouseclickedd" onMouseEntered="#panneaction" onMouseExited="#panneexited" onMousePressed="#mousepressed" prefHeight="149.0" prefWidth="218.0">
+               <children>
+                  <ImageView fx:id="userp111" fitHeight="112.0" fitWidth="130.0" layoutX="48.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/logout.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="text4" layoutX="16.0" layoutY="134.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="175.0" style="-fx-background-color: transparent;" text="LOGOUT" textFill="#3d6cb2">
+                     <font>
+                        <Font name="Gabriola" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane1" layoutX="9.0" layoutY="205.0" prefHeight="494.0" prefWidth="930.0" style="-fx-border-color: #1C2833;" visible="false">
+         <children>
+            <TextField fx:id="ser" layoutX="362.0" layoutY="24.0" prefHeight="34.0" prefWidth="289.0" style="-fx-background-color: transparent; -fx-border-color: transparent transparent #1c2833 transparent;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="55.0" layoutY="18.0" prefHeight="39.0" prefWidth="268.0" text="Search by flight_number:" textFill="#3d6cb2">
+               <font>
+                  <Font name="Gabriola" size="32.0" />
+               </font>
+            </Label>
+            <TableView fx:id="showCourseTable" layoutX="20.0" layoutY="71.0" prefHeight="411.0" prefWidth="893.0">
+               <columns>
+                  <TableColumn fx:id="name1113" minWidth="0.0" prefWidth="0.0" text="        " />
+                  <TableColumn fx:id="planenumber" prefWidth="203.20000839233398" text="plane number" />
+                  <TableColumn fx:id="planetake" prefWidth="224.8000030517578" text="Plane take-off time" />
+                  <TableColumn fx:id="timearri" prefWidth="218.39996337890625" text="Arrival time" />
+                  <TableColumn fx:id="planedest" prefWidth="245.60003662109375" text="plane destination" />
+               </columns>
+               <stylesheets>
+                  <URL value="@../../../../../Desktop/SECAND_YEAR/database/project/dataBaseProject/src/databaseproject/css/TableView.css" />
+                  <URL value="@../../../c/src/TableView.css" />
+               </stylesheets>
+            </TableView>
+            <AnchorPane fx:id="pane2" layoutX="852.0" layoutY="14.0" onMouseClicked="#mouseclickedd" onMouseEntered="#panneaction" onMouseExited="#panneexited" onMousePressed="#mousepressed" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: transparent; -fx-border-color: #1c2833; -fx-background-radius: 50; -fx-border-radius: 50;">
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="25.0" layoutY="16.0">
+                     <image>
+                        <Image url="@../../../c/src/searchB.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="managerEditStudentSearchG" fitHeight="20.0" fitWidth="20.0" layoutX="25.0" layoutY="15.0" visible="false">
+                     <image>
+                        <Image url="@../../../../../Desktop/SECAND_YEAR/database/project/dataBaseProject/src/databaseproject/images/searchG.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pane21" layoutX="771.0" layoutY="14.0" onMouseClicked="#mouseclickedd" onMouseEntered="#panneaction" onMouseExited="#panneexited" onMousePressed="#mousepressed" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: transparent; -fx-border-color: #1c2833; -fx-background-radius: 50; -fx-border-radius: 50;">
+               <children>
+                  <ImageView fx:id="managerEditStudentSearchG1" fitHeight="20.0" fitWidth="20.0" layoutX="25.0" layoutY="15.0" visible="false">
+                     <image>
+                        <Image url="@../../../../../Desktop/SECAND_YEAR/database/project/dataBaseProject/src/databaseproject/images/searchG.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="text11" layoutX="3.0" layoutY="14.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="70.0" style="-fx-background-color: transparent;" text="BOOK" textFill="#17202a">
+                     <font>
+                        <Font name="Gabriola" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="oo" layoutX="14.0" layoutY="376.0" prefHeight="310.0" prefWidth="331.0">
+         <children>
+            <ImageView fx:id="showflight1" fitHeight="400.0" fitWidth="350.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/airplane.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="mainBlackPanel" layoutX="-1.0" layoutY="2.0" opacity="0.46" prefHeight="726.0" prefWidth="954.0" style="-fx-background-color: black;" visible="false">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
+      <AnchorPane fx:id="lll" layoutX="234.0" layoutY="168.0" minHeight="400.0" minWidth="300.0" prefHeight="465.0" prefWidth="507.0" style="-fx-background-color: #b4d7Fe#3d6cb5; -fx-border-color: #1C2833; -fx-border-style: solid none solid none;" visible="false">
+         <children>
+            <Button fx:id="add" accessibleText="studentButton" layoutX="33.0" layoutY="396.0" mnemonicParsing="false" onAction="#ACTI" onMouseEntered="#panneaction" onMouseExited="#panneexited" onMousePressed="#mousepressed" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: #28B463; -fx-border-radius: 50; -fx-background-radius: 50;" text="BOOKING" textAlignment="CENTER" textFill="#1c2833" AnchorPane.leftAnchor="33.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Text fx:id="passwordHText" fill="#28b463" layoutX="65.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" visible="false">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <Text fx:id="emailHText" fill="#28b463" layoutX="65.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" visible="false">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <Button fx:id="cancel" accessibleText="studentButton" layoutX="271.0" layoutY="396.0" mnemonicParsing="false" onAction="#ACTI" onMouseEntered="#panneaction" onMouseExited="#panneexited" onMousePressed="#mousepressed" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: #28B463; -fx-border-radius: 50; -fx-background-radius: 50;" text="Cancel" textAlignment="CENTER" textFill="#1c2833" AnchorPane.leftAnchor="271.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <AnchorPane layoutX="39.0" layoutY="185.0" prefHeight="71.0" prefWidth="474.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="-31.0" prefHeight="39.0" prefWidth="150.0" text="Tour ID:-" textFill="#1c2833">
+                     <font>
+                        <Font name="Bodoni MT" size="27.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="TD" layoutX="151.0" layoutY="-57.0" prefHeight="55.0" prefWidth="268.0" style="-fx-background-color: transparent; -fx-border-color: transparent transparent #28B463 transparent; -fx-text-fill: #FFFFFF;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <Text fill="#1c2833" layoutX="46.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Bodoni MT Poster Compressed" size="30.0" />
+               </font>
+            </Text>
+            <TextField fx:id="GL" layoutX="190.0" layoutY="190.0" prefHeight="55.0" prefWidth="268.0" style="-fx-background-color: transparent; -fx-border-color: transparent transparent #28B463 transparent; -fx-text-fill: #FFFFFF;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Button fx:id="TBOOK" layoutX="54.0" layoutY="37.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="407.0" style="-fx-background-color: transparent;" text="BOOKING TICKETS" textFill="#1c2833">
+               <font>
+                  <Font name="Bodoni MT" size="37.0" />
+               </font>
+            </Button>
+            <Label layoutX="45.0" layoutY="216.0" prefHeight="39.0" prefWidth="150.0" text="GAMAIL:-" textFill="#1c2833">
+               <font>
+                  <Font name="Bodoni MT" size="27.0" />
+               </font>
+            </Label>
+            <RadioButton layoutX="89.0" layoutY="313.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="118.0" text="VIP" textFill="#1c2833">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="332.0" layoutY="311.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="150.0" text="ECONOMI" textFill="#1c2833">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
