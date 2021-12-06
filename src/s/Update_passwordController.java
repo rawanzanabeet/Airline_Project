@@ -96,7 +96,7 @@ public class Update_passwordController implements Initializable {
         Statement stm=con.createStatement();
         String insQry="update travelerr set passwordd='" +this.neww.getText()+"' where email='"+this.email.getText()+"'";
         System.out.print(insQry);
-     
+        stm.executeUpdate(insQry);
           notification( "Update_Sucessfly","update new password in database",1);  
         
         
