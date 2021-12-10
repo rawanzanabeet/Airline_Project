@@ -4,10 +4,11 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/alanwar/Documents/NetBeansProjects/s/src/s/Update_passwordController.java</file>
-            <file>file:/C:/Users/alanwar/Documents/NetBeansProjects/s/src/s/FXMLDocumentController.java</file>
+            <file>file:/C:/Users/alanwar/Documents/NetBeansProjects/s/src/s/CController.java</file>
+            <file>file:/C:/Users/alanwar/Documents/NetBeansProjects/s/src/s/DetController.java</file>
+            <file>file:/C:/Users/alanwar/Documents/NetBeansProjects/s/src/s/Update_remove_tourController.java</file>
             <file>file:/C:/Users/alanwar/Documents/NetBeansProjects/s/src/s/S.java</file>
-            <file>file:/C:/Users/alanwar/Documents/NetBeansProjects/s/src/s/ForgetController.java</file>
-            <file>file:/C:/Users/alanwar/Documents/NetBeansProjects/s/src/s/update_password.fxml</file>
+            <file>file:/C:/Users/alanwar/Documents/NetBeansProjects/s/src/s/Add_tourController.java</file>
         </group>
     </open-files>
 </project-private>

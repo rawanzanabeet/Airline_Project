@@ -9,19 +9,18 @@ import javafx.scene.control.Button;
 
 
 public class user {
- String  from, to,number, p_name, f_date, f_time,  f_number, f_type;
- Button update;
- public user(String  from,String to,String number,String p_name,String f_date,String f_time,String  f_number,String f_type,Button update){
+ String  from, to, p_name, f_date, f_time,  f_number, f_type;
+
+ public user(String  from,String to,String p_name,String f_date,String f_time,String  f_number,String f_type){
     this.f_date= f_date;
     this.f_number=f_number;
     this.f_time=f_time;
     this.f_type=f_type;
     this.from=from;
-    this.number=number;
+  //  this.number=number;
     this.p_name=p_name;
     this.to=to;
-    this.update=update;
- 
+    
  }
 
     public String getFrom() {
@@ -40,13 +39,7 @@ public class user {
         this.to = to;
     }
 
-    public String getNumber() {
-        return number;
-    }
 
-    public void setNumber(String number) {
-        this.number = number;
-    }
 
     public String getP_name() {
         return p_name;
@@ -88,14 +81,5 @@ public class user {
         this.f_type = f_type;
     }
 
-    public Button getUpdate() {
-        return update;
-    }
-
-    public void setUpdate(Button update) {
-        this.update = update;
-    }
- 
- 
  
 }

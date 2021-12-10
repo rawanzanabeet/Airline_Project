@@ -73,7 +73,7 @@
                                     <Font name="Andalus" size="22.0" />
                                  </font>
                               </Button>
-                              <Button layoutX="33.0" layoutY="430.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="114.0" styleClass="parent" stylesheets="@css.css" text="Report" textFill="#fefffd">
+                              <Button layoutX="33.0" layoutY="430.0" mnemonicParsing="false" onAction="#show" prefHeight="52.0" prefWidth="114.0" styleClass="parent" stylesheets="@css.css" text="Report" textFill="#fefffd">
                                  <font>
                                     <Font name="Andalus" size="22.0" />
                                  </font>

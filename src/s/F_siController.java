@@ -117,7 +117,6 @@ flag=true;
 
         
         
-        con.commit();
         con.close();
     
     

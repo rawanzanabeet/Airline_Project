@@ -64,6 +64,12 @@ public class Add_tourController implements Initializable {
              @FXML
     private TextField p_name;
              
+             
+                @FXML
+    private TextField seat;
+             
+             
+             
        String a="Economy"  ;
         String b="Cabin_Class"  ;
         String insQry;
@@ -92,14 +98,14 @@ public class Add_tourController implements Initializable {
         
         {
         
-         insQry="insert into add_man values('" +this.f_num.getText()+"',"+this.p_num.getText()+",'"+this.from.getText()+"','"+this.to.getText()+"','"+a+"','"+this.f_time.getText()+"','" +     this.p_name.getText() +"','"                                 +    this.p_date.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")) + "')";
+         insQry="insert into add_man values('" +this.f_num.getText()+"',"+this.p_num.getText()+",'"+this.from.getText()+"','"+this.to.getText()+"','"+a+"','"+this.f_time.getText()+"','" +     this.p_name.getText() +"','"                                 +    this.p_date.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")) +"','"+this.to.getText() + "')";
       
         }
           if (type2.isSelected())
         
         {
         
-         insQry="insert into add_man values('" +this.f_num.getText()+"',"+this.p_num.getText()+",'"+this.from.getText()+"','"+this.to.getText()+"','"+b+"','"+this.f_time.getText()+"','" +     this.p_name.getText() +"','"                                 +    this.p_date.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")) + "')";
+         insQry="insert into add_man values('" +this.f_num.getText()+"',"+this.p_num.getText()+",'"+this.from.getText()+"','"+this.to.getText()+"','"+b+"','"+this.f_time.getText()+"','" +     this.p_name.getText() +"','"                                 +    this.p_date.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")) + "','"+this.to.getText() + "')";
       
         }
         

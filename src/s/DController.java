@@ -95,7 +95,16 @@ public class DController implements Initializable {
     
     
 } 
-  
+   @FXML
+    private void show(ActionEvent event) throws IOException { 
+             
+    Parent scondparent = FXMLLoader.load(getClass().getResource("update_remove_tour.fxml")); 
+        Scene scene2 = new Scene(scondparent);
+        Stage Window=(Stage)((Node)event.getSource()).getScene().getWindow();
+       Window.setScene(scene2);
+       
+        Window.show();
+    }
   @FXML
     private void add_tour(ActionEvent event) throws IOException { 
         

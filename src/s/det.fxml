@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="791.0" prefWidth="1015.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="s.DetController">
+   <children>
+      <Button fx:id="browse" layoutX="946.0" layoutY="360.0" mnemonicParsing="false" onAction="#browse" text="browse" />
+      <TextArea fx:id="url_img" layoutX="766.0" layoutY="287.0" prefHeight="48.0" prefWidth="307.0" />
+      <ImageView fx:id="im" fitHeight="247.0" fitWidth="356.0" layoutX="717.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="update" layoutX="845.0" layoutY="360.0" mnemonicParsing="false" onAction="#update" text="save" />
+      <ImageView fitHeight="219.0" fitWidth="339.0" layoutX="711.0" layoutY="431.0" pickOnBounds="true" preserveRatio="true" />
+      <TextArea fx:id="url_img1" layoutX="752.0" layoutY="669.0" prefHeight="48.0" prefWidth="307.0" />
+      <Button fx:id="browse1" layoutX="922.0" layoutY="729.0" mnemonicParsing="false" onAction="#browse" text="browse" />
+      <Button fx:id="update1" layoutX="821.0" layoutY="729.0" mnemonicParsing="false" onAction="#update" text="save" />
+      <TextField fx:id="f_num" layoutX="164.0" layoutY="80.0" />
+      <TextField fx:id="from" layoutX="164.0" layoutY="157.0" />
+      <TextField fx:id="too" layoutX="164.0" layoutY="244.0" />
+      <TextField fx:id="type" layoutX="164.0" layoutY="335.0" />
+      <TextField fx:id="time" layoutX="164.0" layoutY="431.0" />
+      <TextField fx:id="p_name" layoutX="158.0" layoutY="510.0" />
+      <TextField fx:id="f_date" layoutX="158.0" layoutY="609.0" />
+      <TextField fx:id="seat" layoutX="152.0" layoutY="662.0" />
+      <TextField fx:id="tiket_price" layoutX="158.0" layoutY="714.0" />
+      <Label layoutX="53.0" layoutY="101.0" text="flight_number" />
+      <Label layoutX="53.0" layoutY="162.0" text="from" />
+      <Label layoutX="64.0" layoutY="249.0" text="to" />
+      <Label layoutX="53.0" layoutY="335.0" text="flight_type" />
+      <Label layoutX="64.0" layoutY="436.0" text="time" />
+      <Label layoutX="64.0" layoutY="510.0" text="plane_name" />
+      <Label layoutX="82.0" layoutY="614.0" text="flight_date" />
+      <Label layoutX="82.0" layoutY="667.0" text="seat" />
+      <Label layoutX="82.0" layoutY="719.0" text="tiket_price" />
+      <Button layoutX="512.0" layoutY="730.0" mnemonicParsing="false" text="back" />
+   </children>
+</AnchorPane>
