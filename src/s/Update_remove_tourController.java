@@ -1,6 +1,7 @@
 
 package s;
 
+import java.awt.Panel;
 import static java.awt.SystemColor.text;
 import java.io.IOException;
 import java.net.URL;
@@ -33,6 +34,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import javax.mail.MessagingException;
@@ -170,19 +172,21 @@ try {
     
     
     
+    String h;
     String t;
+    Panel b;
     @FXML
     private void remove(ActionEvent event) throws IOException { 
   
    t=table.getSelectionModel().getSelectedItem().toString();
-     
-    Parent scondparent = FXMLLoader.load(getClass().getResource("det.fxml")); 
-        Scene scene2 = new Scene(scondparent);
-        Stage Window=(Stage)((Node)event.getSource()).getScene().getWindow();
-       Window.setScene(scene2);
-       
-        Window.show();
-  
+   FXMLLoader x=new FXMLLoader(getClass().getResource("det.fxml"));
+      Parent root =(Parent) x.load();
+      DetController oc =x.getController();
+      
+       oc.myFunction(t);
+       Stage st=new Stage();
+       st.setScene(new Scene(root));
+       st.show();
     }
   @FXML
     private void cheack(ActionEvent event) throws IOException { 

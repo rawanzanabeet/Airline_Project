@@ -37,7 +37,7 @@ import javafx.scene.image.ImageView;
 
 
 public class DetController implements Initializable{
-
+String hh;
     
     
     
@@ -178,5 +178,21 @@ Image image = new Image(inputstream);
     public void initialize(URL url, ResourceBundle rb) {
          
     }    
+String []h;
+String []h2;
+    void myFunction(String t) {
+       this.f_num.setText(t);
+       h=t.split(",");
+         this.f_num.setText(h[0]);
+         this.from.setText(h[1]);
+         this.too.setText(h[2]);
+         this.type.setText(h[3]);
+         this.time.setText(h[4]);
+         this.p_name.setText(h[5]);
+         this.f_date.setText(h[6]);
+         
+
+     System.out.print("rawaaaaaaaaaaaaaaaaaan you done it");
+    }
 
 }
