@@ -1,9 +1,17 @@
 
 package s;
-
+import com.teknikindustries.bulksms.SMS;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLEncoder;
+import java.net.HttpURLConnection;
 import java.awt.Panel;
 import static java.awt.SystemColor.text;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,6 +19,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import static java.time.LocalDate.from;
+import java.util.Base64;
 import static java.util.Date.from;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -59,7 +68,7 @@ public class Update_remove_tourController implements Initializable {
     private  TableView table;
           
       @FXML
-     private ObservableList<String> dbTypeList = FXCollections.observableArrayList("Flight Number","From","To","Flight Type","Flight Time","Plane Name","Fight Date","show all tour");
+     private ObservableList<String> dbTypeList = FXCollections.observableArrayList("Flight Number","From","Arrival_Area","Flight Type","Flight Time","Plane Name","Fight Date","show all tour");
              @FXML
     private ComboBox search;
           @FXML 
@@ -173,20 +182,93 @@ try {
     
     
     String h;
-    String t;
+    String ttt;
     Panel b;
+     @FXML
+    void removvvv(ActionEvent event) throws IOException {
+    //    System.out.print("rawaaaan");
+      // SMS smstut=new SMS();	
+       // smstut.SendSMS("rawanzanabeet", "rawan*123", "YOU DO IT RAWAAAN", "+970592971072", "https://www.bulksms.com/developer/eapi/submission/send_sms/submission/send_sms/2/2.0");
+ 
+
+    // This URL is used for sending messages
+    String myURI = "https://api.bulksms.com/v1";
+
+    // change these values to match your own account
+    String myUsername = "rawanzanabeett";
+    String myPassword = "rawan*123";
+
+    // the details of the message we want to send
+    String myData = "{to: \"+970592971072\", encoding: \"UNICODE\", body: \"Dobrá práce! Jak se máš?\"}";
+
+    // if your message does not contain unicode, the "encoding" is not required:
+    // String myData = "{to: \"1111111\", body: \"Hello Mr. Smith!\"}";
+
+    // build the request based on the supplied settings
+    URL url = new URL(myURI);
+    HttpURLConnection request = (HttpURLConnection) url.openConnection();
+    request.setDoOutput(true);
+
+    // supply the credentials
+    String authStr = myUsername + ":" + myPassword;
+    String authEncoded = Base64.getEncoder().encodeToString(authStr.getBytes());
+    request.setRequestProperty("Authorization", "Basic " + authEncoded);
+
+    // we want to use HTTP POST
+    request.setRequestMethod("POST");
+    request.setRequestProperty( "Content-Type", "application/json");
+
+    // write the data to the request
+    OutputStreamWriter out = new OutputStreamWriter(request.getOutputStream());
+    out.write(myData);
+    out.close();
+
+    // try ... catch to handle errors nicely
+    try {
+      // make the call to the API
+      InputStream response = request.getInputStream();
+      BufferedReader in = new BufferedReader(new InputStreamReader(response));
+      String replyText;
+      while ((replyText = in.readLine()) != null) {
+        System.out.println(replyText);
+      }
+      in.close();
+    } catch (IOException ex) {
+      System.out.println("An error occurred:" + ex.getMessage());
+      BufferedReader in = new BufferedReader(new InputStreamReader(request.getErrorStream()));
+      // print the detail that comes with the error
+      String replyText;
+      while ((replyText = in.readLine()) != null) {
+        System.out.println(replyText);
+      }
+      in.close();
+    }
+    request.disconnect();
+  }
+
+       
+    
+  
+    
+    
+    
+    
     @FXML
     private void remove(ActionEvent event) throws IOException { 
   
-   t=table.getSelectionModel().getSelectedItem().toString();
-   FXMLLoader x=new FXMLLoader(getClass().getResource("det.fxml"));
-      Parent root =(Parent) x.load();
-      DetController oc =x.getController();
-      
-       oc.myFunction(t);
-       Stage st=new Stage();
-       st.setScene(new Scene(root));
-       st.show();
+            try {
+                ttt=table.getSelectionModel().getSelectedItem().toString();
+                FXMLLoader x=new FXMLLoader(getClass().getResource("det.fxml"));
+                Parent root =(Parent) x.load();
+                DetController oc =x.getController();
+                
+                oc.fxmlloaderr(ttt);
+                Stage st=new Stage();
+                st.setScene(new Scene(root));
+                st.show();
+            } catch (SQLException ex) {
+                Logger.getLogger(Update_remove_tourController.class.getName()).log(Level.SEVERE, null, ex);
+            }
     }
   @FXML
     private void cheack(ActionEvent event) throws IOException { 
@@ -197,7 +279,7 @@ try {
         if(  search.getValue().equals("Flight Number")&& !(this.select.getText().equals("")))
         {
             
-           show("select * from add_tour where Flight Number='"+this.select.getText()+"'");  
+           show("select * from add_tour where FLIGHT_NUMBER='"+this.select.getText()+"'");  
          System.out.print(a);
         }
         
@@ -208,38 +290,44 @@ try {
          System.out.print(a);
         }
         
-       if(  search.getValue().equals("To") && !(this.select.getText().equals("")))
+       if(  search.getValue().equals("Arrival_Area") && !(this.select.getText().equals("")))
         {
-            a="select * from add_tour where Too ='"+this.select.getText()+"'";
-         show("select * from add_tour where Too ='"+this.select.getText()+"'");  
+            a="select * from add_tour where Arrival_Area ='"+this.select.getText()+"'";
+         show("select * from add_tour where Arrival_Area ='"+this.select.getText()+"'");  
          System.out.print(a);
         }
         
        
         if(  search.getValue().equals("Flight Type") && !(this.select.getText().equals("")))
         {
-            a="select * from add_tour where Flight Type ='"+this.select.getText()+"'";
-         show("select * from add_tour where Flight Type ='"+this.select.getText()+"'");  
+            a="select * from add_tour where FLIGHT_TYPE ='"+this.select.getText()+"'";
+         show("select * from add_tour where FLIGHT_TYPE ='"+this.select.getText()+"'");  
          System.out.print(a);
         }
         
        
-        if(  search.getValue().equals("Plane Name") && !(this.select.getText().equals("")))
+        if(  search.getValue().equals("Flight Time") && !(this.select.getText().equals("")))
         {
-            a="select * from add_tour where Flight Type ='"+this.select.getText()+"'";
-         show("select * from add_tour where Flight Type ='"+this.select.getText()+"'");  
+            a="select * from add_tour where FLIGHT_TIME ='"+this.select.getText()+"'";
+         show("select * from add_tour where FLIGHT_TIME ='"+this.select.getText()+"'");  
          System.out.print(a);
         }
        
        
        
-         if(  search.getValue().equals("Fight Date") && !(this.select.getText().equals("")))
+         if(  search.getValue().equals("Plane Name") && !(this.select.getText().equals("")))
         {
-            a="select * from add_tour where Fight Date ='"+this.select.getText()+"'";
-         show("select * from add_tour where Fight Date ='"+this.select.getText()+"'");  
+            a="select * from add_tour where PLANE_NAME ='"+this.select.getText()+"'";
+         show("select * from add_tour where PLANE_NAME ='"+this.select.getText()+"'");  
          System.out.print(a);
         }
        
+         if(  search.getValue().equals("To") && !(this.select.getText().equals("")))
+        {
+            a="select * from add_tour where FLIGHT_DATE ='"+this.select.getText()+"'";
+         show("select * from add_tour where FLIGHT_DATE ='"+this.select.getText()+"'");  
+         System.out.print(a);
+        }
          if(  search.getValue().equals("show all tour") && !(this.select.getText().equals("")))
         {
             a="select * from add_tour";

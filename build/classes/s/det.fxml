@@ -4,37 +4,247 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="791.0" prefWidth="1015.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="s.DetController">
+<AnchorPane id="AnchorPane" prefHeight="802.0" prefWidth="900.0" style="-fx-background-color: #424d9b;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="s.DetController">
    <children>
-      <Button fx:id="browse" layoutX="946.0" layoutY="360.0" mnemonicParsing="false" onAction="#browse" text="browse" />
-      <TextArea fx:id="url_img" layoutX="766.0" layoutY="287.0" prefHeight="48.0" prefWidth="307.0" />
-      <ImageView fx:id="im" fitHeight="247.0" fitWidth="356.0" layoutX="717.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="update" layoutX="845.0" layoutY="360.0" mnemonicParsing="false" onAction="#update" text="save" />
-      <ImageView fitHeight="219.0" fitWidth="339.0" layoutX="711.0" layoutY="431.0" pickOnBounds="true" preserveRatio="true" />
-      <TextArea fx:id="url_img1" layoutX="752.0" layoutY="669.0" prefHeight="48.0" prefWidth="307.0" />
-      <Button fx:id="browse1" layoutX="922.0" layoutY="729.0" mnemonicParsing="false" onAction="#browse" text="browse" />
-      <Button fx:id="update1" layoutX="821.0" layoutY="729.0" mnemonicParsing="false" onAction="#update" text="save" />
-      <TextField fx:id="f_num" layoutX="164.0" layoutY="80.0" />
-      <TextField fx:id="from" layoutX="164.0" layoutY="157.0" />
-      <TextField fx:id="too" layoutX="164.0" layoutY="244.0" />
-      <TextField fx:id="type" layoutX="164.0" layoutY="335.0" />
-      <TextField fx:id="time" layoutX="164.0" layoutY="431.0" />
-      <TextField fx:id="p_name" layoutX="158.0" layoutY="510.0" />
-      <TextField fx:id="f_date" layoutX="158.0" layoutY="609.0" />
-      <TextField fx:id="seat" layoutX="152.0" layoutY="662.0" />
-      <TextField fx:id="tiket_price" layoutX="158.0" layoutY="714.0" />
-      <Label layoutX="53.0" layoutY="101.0" text="flight_number" />
-      <Label layoutX="53.0" layoutY="162.0" text="from" />
-      <Label layoutX="64.0" layoutY="249.0" text="to" />
-      <Label layoutX="53.0" layoutY="335.0" text="flight_type" />
-      <Label layoutX="64.0" layoutY="436.0" text="time" />
-      <Label layoutX="64.0" layoutY="510.0" text="plane_name" />
-      <Label layoutX="82.0" layoutY="614.0" text="flight_date" />
-      <Label layoutX="82.0" layoutY="667.0" text="seat" />
-      <Label layoutX="82.0" layoutY="719.0" text="tiket_price" />
-      <Button layoutX="512.0" layoutY="730.0" mnemonicParsing="false" text="back" />
+      <Button fx:id="browse" layoutX="738.0" layoutY="372.0" mnemonicParsing="false" onAction="#browse" styleClass="parent" stylesheets="@CSS_1.css" text="Browse" textFill="#dc8e47">
+         <font>
+            <Font name="Gabriola" size="45.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <input>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </input></DropShadow>
+         </effect></Button>
+      <TextArea fx:id="url_img" layoutX="500.0" layoutY="342.0" prefHeight="55.0" prefWidth="388.0" style="-fx-background-color: #424d9b;" styleClass="dark-blue" stylesheets="@CSS_1.css">
+         <effect>
+            <DropShadow color="#fd9519" />
+         </effect></TextArea>
+      <ImageView fx:id="im" fitHeight="225.0" fitWidth="388.0" layoutX="505.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow color="#fd9519" />
+         </effect></ImageView>
+      <Button fx:id="update" layoutX="564.0" layoutY="373.0" mnemonicParsing="false" onAction="#save" prefHeight="84.0" prefWidth="135.0" styleClass="parent" stylesheets="@CSS_1.css" text="Save" textFill="#dc8e47">
+         <font>
+            <Font name="Gabriola" size="45.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <input>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </input>
+            </DropShadow>
+         </effect></Button>
+      <ImageView fx:id="im2" fitHeight="225.0" fitWidth="388.0" layoutX="505.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow color="#fd9519" />
+         </effect></ImageView>
+      <TextArea fx:id="url_img2" layoutX="520.0" layoutY="676.0" prefHeight="48.0" prefWidth="373.0" style="-fx-background-color: #424d9b;" styleClass="dark-blue" stylesheets="@CSS_1.css">
+         <effect>
+            <DropShadow color="#fd9519" />
+         </effect></TextArea>
+      <Button fx:id="browse2" layoutX="738.0" layoutY="711.0" mnemonicParsing="false" onAction="#browse2" styleClass="parent" stylesheets="@CSS_1.css" text="Browse" textFill="#dc8e47">
+         <font>
+            <Font name="Gabriola" size="45.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <input>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </input></DropShadow>
+         </effect></Button>
+      <Button fx:id="update1" layoutX="571.0" layoutY="711.0" mnemonicParsing="false" onAction="#save2" styleClass="parent" stylesheets="@CSS_1.css" text="Save" textFill="#dc8e47">
+         <font>
+            <Font name="Gabriola" size="45.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <input>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </input></DropShadow>
+         </effect></Button>
+      <TextField fx:id="f_num" layoutX="263.0" layoutY="428.0" style="-fx-background-radius: 30;">
+         <effect>
+            <DropShadow color="#fd9519" />
+         </effect></TextField>
+      <TextField fx:id="from" layoutX="263.0" layoutY="121.0" style="-fx-background-radius: 30;">
+         <effect>
+            <DropShadow color="#fd9519" />
+         </effect></TextField>
+      <TextField fx:id="too" layoutX="263.0" layoutY="369.0" style="-fx-background-radius: 30;">
+         <effect>
+            <DropShadow color="#fd9519" />
+         </effect></TextField>
+      <TextField fx:id="type" layoutX="263.0" layoutY="181.0" style="-fx-background-radius: 30;">
+         <effect>
+            <DropShadow color="#fd9519" />
+         </effect></TextField>
+      <TextField fx:id="time" layoutX="263.0" layoutY="301.0" style="-fx-background-radius: 30;">
+         <effect>
+            <DropShadow color="#fd9519" />
+         </effect></TextField>
+      <TextField fx:id="p_name" layoutX="263.0" layoutY="548.0" style="-fx-background-radius: 30;">
+         <effect>
+            <DropShadow color="#fd9519" />
+         </effect></TextField>
+      <TextField fx:id="f_date" layoutX="263.0" layoutY="614.0" style="-fx-background-radius: 30;">
+         <effect>
+            <DropShadow color="#fd9519" />
+         </effect></TextField>
+      <TextField fx:id="seat" layoutX="263.0" layoutY="484.0" style="-fx-background-radius: 30;">
+         <effect>
+            <DropShadow color="#fd9519" />
+         </effect></TextField>
+      <TextField fx:id="tiket_price" layoutX="263.0" layoutY="241.0" style="-fx-background-radius: 30;">
+         <effect>
+            <DropShadow color="#fd9519" />
+         </effect></TextField>
+      <Label layoutX="64.0" layoutY="432.0" text="flight_number" textFill="#b4d7fe">
+         <font>
+            <Font name="Castellar" size="18.0" />
+         </font></Label>
+      <Label layoutX="68.0" layoutY="125.0" text="From" textFill="#b4d7fe">
+         <font>
+            <Font name="Castellar" size="18.0" />
+         </font></Label>
+      <Label layoutX="64.0" layoutY="376.0" text="to" textFill="#b4d7fe">
+         <font>
+            <Font name="Castellar" size="18.0" />
+         </font></Label>
+      <Label layoutX="58.0" layoutY="185.0" text="flight_type" textFill="#b4d7fe">
+         <font>
+            <Font name="Castellar" size="18.0" />
+         </font></Label>
+      <Label layoutX="68.0" layoutY="305.0" text="time" textFill="#b4d7fe">
+         <font>
+            <Font name="Castellar" size="18.0" />
+         </font></Label>
+      <Label layoutX="64.0" layoutY="552.0" text="plane_name" textFill="#b4d7fe">
+         <font>
+            <Font name="Castellar" size="18.0" />
+         </font></Label>
+      <Label layoutX="64.0" layoutY="492.0" text="flight_date" textFill="#b4d7fe">
+         <font>
+            <Font name="Castellar" size="18.0" />
+         </font></Label>
+      <Label layoutX="70.0" layoutY="618.0" text="seat" textFill="#b4d7fe">
+         <font>
+            <Font name="Castellar" size="18.0" />
+         </font></Label>
+      <Label layoutX="60.0" layoutY="245.0" text="tiket_price" textFill="#b4d7fe">
+         <font>
+            <Font name="Castellar" size="18.0" />
+         </font></Label>
+      <Button layoutX="829.0" mnemonicParsing="false" onAction="#backk" prefHeight="54.0" prefWidth="68.0" styleClass="parent" stylesheets="@CSS.css" />
+      <Label layoutX="187.0" layoutY="12.0" text="Show Tour Information" textFill="#dc8e47">
+         <font>
+            <Font name="Gabriola" size="70.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <input>
+                  <Glow>
+                     <input>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </input>
+                  </Glow>
+               </input></DropShadow>
+         </effect>
+      </Label>
+      <ImageView fitHeight="39.0" fitWidth="47.0" layoutX="14.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Ftommm.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="47.0" layoutX="11.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/type.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="47.0" layoutX="14.0" layoutY="365.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Too.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="47.0" layoutX="844.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/remove.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="47.0" layoutX="14.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/price.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="47.0" layoutX="14.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/fflightTime.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="47.0" layoutX="14.0" layoutY="610.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/seat.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="47.0" layoutX="14.0" layoutY="424.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/FlightNum_1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="47.0" layoutX="14.0" layoutY="488.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/bd.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="47.0" layoutX="14.0" layoutY="544.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/flightName.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

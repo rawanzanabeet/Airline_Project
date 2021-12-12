@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="software_airline_project.jnlp">
+  <information>
+    <title>software_airline_project</title>
+    <vendor>alanwar</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\controlsfx-8.40.11.jar" size="985420" download="eager" />
+    <jar href="lib\javax.mail-1.6.2.jar" size="659031" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.21.jar" size="827942" download="eager" />
+    <jar href="lib\ojdbc8.jar" size="4161744" download="eager" />
+    <jar href="lib\smtp-1.6.3.jar" size="62101" download="eager" />
+    <jar href="software_airline_project.jar" size="24378999" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="software_airline_project" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="s.S"  name="software_airline_project" />
+  <update check="always"/>
+</jnlp>

@@ -2,17 +2,89 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="852.0" prefWidth="1202.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="s.Update_remove_tourController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="s.Update_remove_tourController">
    <children>
-      <TableView fx:id="table" layoutX="17.0" layoutY="96.0" prefHeight="534.0" prefWidth="1068.0" />
-      <ComboBox fx:id="search" editable="true" layoutX="45.0" layoutY="51.0" onAction="#cheack" prefWidth="150.0" promptText="Search" />
-      <TextField fx:id="select" layoutX="214.0" layoutY="51.0" prefHeight="31.0" prefWidth="143.0" />
-      <Button layoutX="38.0" layoutY="656.0" mnemonicParsing="false" onAction="#remove" text="show_detailes" />
-      <Button layoutX="38.0" layoutY="717.0" mnemonicParsing="false" text="remove" />
-      <Button layoutX="41.0" layoutY="771.0" mnemonicParsing="false" text="insert_tour" />
+      <AnchorPane id="AnchorPane" prefHeight="705.0" prefWidth="905.0" style="-fx-background-color: #424d9b;">
+         <children>
+            <TableView fx:id="table" layoutX="59.0" layoutY="290.0" prefHeight="388.0" prefWidth="763.0" />
+            <ComboBox fx:id="search" editable="true" layoutX="144.0" layoutY="126.0" onAction="#cheack" prefHeight="31.0" prefWidth="220.0" promptText="Search" />
+            <TextField fx:id="select" layoutX="486.0" layoutY="126.0" prefHeight="31.0" prefWidth="230.0" style="-fx-background-radius: 30;" />
+            <Button layoutX="59.0" layoutY="180.0" mnemonicParsing="false" onAction="#remove" prefHeight="75.0" prefWidth="282.0" styleClass="parent" stylesheets="@CSS_1.css" text="  ShowDetailes" textFill="#dc8e47">
+               <font>
+                  <Font name="Matura MT Script Capitals" size="30.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button layoutX="641.0" layoutY="179.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="181.0" styleClass="parent" stylesheets="@CSS_1.css" text=" Remove" textAlignment="CENTER" textFill="#dc8e47">
+               <font>
+                  <Font name="Matura MT Script Capitals" size="30.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button layoutX="354.0" layoutY="180.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="239.0" styleClass="parent" stylesheets="@CSS_1.css" text="    InsertTour" textFill="#dc8e47">
+               <font>
+                  <Font name="Matura MT Script Capitals" size="30.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Label layoutX="297.0" layoutY="6.0" text=" Tour Page" textFill="#dc8e47">
+               <font>
+                  <Font name="Gabriola" size="70.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <Glow>
+                           <input>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </input>
+                        </Glow>
+                     </input>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <ImageView fitHeight="45.0" fitWidth="60.0" layoutX="59.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/show.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="60.0" layoutX="364.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/adddd.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="60.0" layoutX="629.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/delete.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
